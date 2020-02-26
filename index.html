@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="./img/favicom.png" />
+    <title>RD-Solicitação Medicamento</title>
+
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="search" style="background-color: #40b422bb;">
+    <a class="navbar-brand" href="#">Medicamento Controlado <img src="./img/2rd-logo-jpg.png" alt="" width="80"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        
+        <ul class="navbar-nav mr-auto"  >
+            <li class="nav-item active">
+                <a class="nav-link"  href="#">NOVA SOLICITAÇÃO<span class="sr-only">SOLICITAÇÃO2</span></a>
+            </li>
+            
+    
+        </ul>
+
+        
+
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" id="pesquisar" type="search" placeholder="Numero solicitação" aria-label="Pesquisar">
+            <button class="btn btn-light my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>
+        <a class="navbar-brand ml-3" href="#">
+            <img src="" width="30" height="30" alt="">
+        </a>
+    </div>
+    
+</nav>
+
+<!-- FIM Header -->
+
+
+<!-- Solicitação de medicamento -->
+<main class="container" id="container">
+    
+    <br>
+    <br>
+
+  <form id="checkout" class="row mt-4">
+   
+
+      <div class="col-md-6">
+           <header class="text-light p-2" style="background-color: #696969;">
+              Dados da Receita
+          </header>
+          <div class="p-2">
+              <div class="form-group">
+                  <label for="nomeMédico">Nome do médico</label>
+                  <input class="form-control" type="text" id="nomeUsuario" name="nomeUsuario" placeholder="Digite seu nome completo" maxlength="40">
+              </div>
+              
+              <div class="form-group">
+                  <label for="dataReceita">Data da receita</label>
+                  <input class="form-control" type="date" id="dataReceita" name="dataReceita" placeholder="Data da Receita">
+              </div>
+              <div class="form-group">
+                  <label for="qtdCaixas">Quantidade de caixas</label>
+                  <input class="form-control" type="number" id="qtdCaixas" name="qtdCaixas" placeholder="Quantidade de caixas" max="10">
+              </div>
+              <div class="form-group">
+                  <label for="crmMedico"> CRM Médico</label>
+                  <input class="form-control" type="number" id="crmMedico" name="crmMedico" placeholder="CRM Médico">
+              </div>
+              
+          </div>
+      </div>
+
+      <!-- DADOS DO PACIENTE -->
+      <div class="col-md-6">
+          <header class="text-light p-2" style="background-color: #696969;">
+              Dados do Paciente
+          </header>
+            <div class="p-2">
+              <div class="form-group">
+                  <label for="nomePaciente">Nome do paciente</label>
+                  <input class="form-control" type="text" id="nomePaciente" name="nomePaciente" placeholder="Nome do paciente" maxlength="40">
+              </div>
+              <div class="form-group">
+                      <label for="cpfPaciente">CPF do paciente</label>
+                      <input class="form-control" type="text" id="cpfPaciente" name="cpfPaciente" placeholder="CPF do paciente">
+              </div>
+              <!-- SEXO -->
+              <div class="form-group">
+                <label for="sexoUsuario">Sexo</label>
+                        <div class="p-2">
+                            <div class="form-group row">
+                                <div class="col-3">
+                                    <label for="sexoMasculino">Masculino</label>
+                                    <input type="radio" name="sexoUsuario" id="sexoMasculino">
+                                </div>
+                                <div class="col-3">
+                                    <label for="sexoFeminino">Feminino</label>
+                                    <input type="radio" name="sexoUsuario" id="sexoFeminino">
+                                </div>
+                            </div>
+                    </div>
+
+                    <label for="nascimentoUsuario">Data de nascimento</label>
+                      <input class="form-control" type="date" id="nascimentoUsuario" name="nascimentoUsuario" placeholder="Data de nascimento">
+      
+                     </div>
+                      
+         </div>
+
+
+           <div class="p-2">
+                <label style="font-size: large;" for="complementoUsuario">Selecione o tipo de envio</label>
+                <div class="form-group row">
+                    
+                
+                    <div class="col-8">
+                        <img src="./img/anexo-png.png" alt="" width="30"> <label for="anexararquivo">Anexar arquivo</label> 
+                        <input type="radio" name="tipoDeEnvio" id="tAnexararquivo">
+                    </div>
+                    <div class="col-8">
+                        <img src="./img/whatsapp-png.webp" alt="" width="30"> <label for="freteNormal">WhatsApp</label> 
+                        <input type="radio" name="tipoDeEnvio" id="tWhatsApp">
+                    </div>
+                    <div class="col-8">
+                        <img src="./img/email-png.png" alt="" width="30"> <label for="email">e-mail</label> 
+                        <input type="radio" name="tipoDeEnvio" id="tEmail">
+                    </div>
+                </div>
+  
+              </div>
+
+
+
+
+               <div id="btnfinalizarcadastro" class="d-flex justify-content-end">
+                <button class="btn btn-success" type="button" data-toggle="modal" data-target="#compraFinalizada">Enviar</button>
+               </div>
+          </div>
+
+
+           
+
+       
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    </div>
+
+
+              <!-- BOTÃO FINALIZAR CADASTRO -->
+              
+              
+          </div>
+      </div>
+     
+  </form>
+</main>
+
+
+<!-- MODAL -->
+<div id="compraFinalizada" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Solicitação realizada com sucesso!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Agora é só aguardar pela análise da sua solicitação!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Continuar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- FIM CADASTRO USUARIO -->
+
+
+
+
+
+<!-- RODA PÉ -->
+<footer>
+  <nav av class="navbar navbar-dark fixed-bottom " style="background-color: #3fb422;">
+    <a class="navbar-brand" id="nome-site-footer">Solicitação de Medicamento Controlado
+
+        <img src="img/copyright-logo-png-5.png" width="15" alt=""></a>
+
+    <ul id="redes-sociais">
+
+        <a href="http://www.instagram.com/"><img src=".//img/2rd-logo-jpg.png" alt="Instagram do Site de Gelo" width="80"></a>
+
+
+    </ul>
+
+  </nav>
+
+</footer>
+
+
+
+
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/script.js"> </script>
+</body>
+
+</html>
